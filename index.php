@@ -3,7 +3,6 @@
 // 1. Define the database file name.
 //    PDO will create this file if it doesn't exist.
 $databaseFile = 'my_database.sqlite';
-//Test
 
 try {
     // 2. Connect to the SQLite database using PDO.
@@ -68,5 +67,7 @@ try {
     // 6. Handle any errors that may occur.
     echo "<br>❌ An error occurred: " . $e->getMessage();
 }
+
+
 
 ?>
