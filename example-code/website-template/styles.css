@@ -1,0 +1,41 @@
+/* Simple CSS Grid layout using columns only */
+:root{
+--gap: 16px;
+--sidebar-width: 220px;
+}
+
+
+*{box-sizing: border-box}
+html,body{height: 100%;margin:0;font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial}
+
+
+.site-header{background: #1e293b;color: #fff;padding: 16px}
+.site-header h1{margin:0;font-size: 1.25rem}
+
+
+/* The grid container uses columns only. We do not declare explicit rows. */
+.site-grid{
+display: grid;
+grid-template-columns: var(--sidebar-width) 1fr;
+gap: var(--gap);
+padding: var(--gap);
+align-items: start; /* this avoids defining rows explicitly */
+}
+
+
+/* Place sidebar in the first column and content in the second column */
+.site-sidebar{grid-column: 1 / 2;background: #f1f5f9;padding: 12px;border-radius: 8px}
+.site-content{grid-column: 2 / 3;background: #fff;padding: 12px;border-radius: 8px}
+
+
+/* Footer spans both columns. We only set column placement not rows. */
+.site-footer{grid-column: 1 / -1;background: #0f172a;color:#fff;padding:12px;text-align:center;margin-top:var(--gap)}
+
+
+/* Small responsive tweak using column change only */
+@media (max-width: 700px){
+.site-grid{grid-template-columns: 1fr}
+.site-sidebar{grid-column: 1 / 2}
+.site-content{grid-column: 1 / 2}
+.site-footer{grid-column: 1 / -1}
+}
