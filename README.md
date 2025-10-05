@@ -16,7 +16,7 @@ The examples in this repository aim to help students understand the basics of PH
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/your-repo-name.git
+    git clone https://github.com/matthewellis-IEG/SMD-T-DSDD-Y2/
     ```
 2. Open the examples in your preferred code editor.
 3. Follow the instructions in each file to run and experiment with the code.
