@@ -3,7 +3,7 @@
 session_start();
 
 // Set a cookie
-setcookie('my_cookie', 'cookie_value', time() + 3600, '/'); // Expires in 1 hour
+setcookie('my_cookie', 'cookie_value', time() + 3600, '/'); // Expires in 1 hour. Counted in seconds.
 
 // Set session values
 $_SESSION['username'] = 'john_doe';
